@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DOM (Document Object Model)</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to DOM</h1>
+    </header>
+    <main>
+        <h2 id="sub_h">Now i ma learning DOM</h2>
+        <section>
+            <ul>
+                <li class="abc">Mayor</li>
+                <li class="abc">chairman</li>
+                <li class="abc">Membar</li>
+                <li>patineta</li>
+            </ul>
+        </section>
+        <section>
+            <ul>
+                <li id="ch">Cha </li>
+                <li>muri</li>
+                <li>coffe</li>
+                <li>biscuit</li>
+            </ul>
+        </section>
+        <section>
+            <ul>
+                <li>but </li>
+                <li>nuduls</li>
+                <li>haser mangso</li>
+                <li>corla vagi</li>
+            </ul>
+        </section>
+
+    </main>
+    <footer>
+
+    </footer>
+    <script src="jScript/first.js"></script>
+    <script src="jScript/styleInJs.js"></script>
+    <script>
+        const liCollection = document.getElementsByTagName('li');
+        // console.log(liCollection)
+        for (const li of liCollection) {
+            //console.log(li.innerText);
+        }
+    </script>
+</body>
+
+</html>
