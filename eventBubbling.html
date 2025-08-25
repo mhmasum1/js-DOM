@@ -1,0 +1,30 @@
+<div id="parent-parent" style="background-color: brown; padding: 20px; border-radius: 10px;">
+    <h1>Grand Parent</h1>
+    <div id="parent" style="padding:20px; background:lightblue; border-radius: 10px;">
+        <h2>Parent Div</h2>
+        <button id="child">Click Me</button>
+        <button id="oh">Clicked Me 2</button>
+        <button id="update">Update</button>
+    </div>
+</div>
+
+<script>
+    document.getElementById("parent-parent").addEventListener("click", function () {
+        alert(" Grand Parent Clicked!");
+    });
+    document.getElementById("parent").addEventListener("click", function () {
+        alert("Parent Clicked!");
+    });
+    document.getElementById("child").addEventListener("click", function () {
+        alert("Child Clicked!");
+    });
+    document.getElementById("oh").addEventListener("click", function () {
+        alert("Child 2 Clicked!");
+    });
+    document.getElementById("update").addEventListener("click", function () {
+        alert("Update Clicked!");
+        event.stopImmediatePropagation();
+    });
+
+
+</script>

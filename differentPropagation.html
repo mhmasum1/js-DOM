@@ -1,0 +1,18 @@
+<button id="btn">Click Me</button>
+
+<script>
+    let btn = document.getElementById("btn");
+
+    btn.addEventListener("click", function (e) {
+        alert("Listener 1");
+        e.stopPropagation();  // শুধু parent এ যাওয়া বন্ধ করবে
+    });
+
+    btn.addEventListener("click", function (e) {
+        alert("Listener 2"); // এটাও চলবে
+    });
+
+    document.body.addEventListener("click", function () {
+        alert("Body Clicked!");
+    });
+</script>

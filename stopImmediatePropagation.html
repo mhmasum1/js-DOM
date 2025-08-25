@@ -1,0 +1,18 @@
+<button id="btn">Click Me</button>
+
+<script>
+    let btn = document.getElementById("btn");
+
+    btn.addEventListener("click", function (e) {
+        alert("Listener 1");
+        e.stopImmediatePropagation(); // সবকিছু এখানেই থেমে যাবে
+    });
+
+    btn.addEventListener("click", function (e) {
+        alert("Listener 2"); // এটা আর চলবে না ❌
+    });
+
+    document.body.addEventListener("click", function () {
+        alert("Body Clicked!");
+    });
+</script>

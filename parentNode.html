@@ -1,0 +1,14 @@
+<ul id="menu">
+    <li>Item 1 <button>Delete</button></li>
+    <li>Item 2 <button>Delete</button></li>
+    <li>Item 3 <button>Delete</button></li>
+</ul>
+
+<script>
+    document.getElementById("menu").addEventListener("click", function (event) {
+        if (event.target.tagName === "BUTTON") {
+            const li = event.target.parentNode; // button এর parent <li>
+            li.remove(); // সেই <li> টা ডিলিট করব
+        }
+    });
+</script>
